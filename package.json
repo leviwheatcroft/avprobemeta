@@ -4,7 +4,7 @@
   "description": "simple avprobe wrapper for node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/leviwheatcroft/avprobemeta/issues"
   },
-  "homepage": "https://github.com/leviwheatcroft/avprobemeta"
+  "homepage": "https://github.com/leviwheatcroft/avprobemeta",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.1.1"
+  }
 }
