@@ -15,8 +15,9 @@ module.exports = function(filePath, options, callback) {
   if (options.streams !== false) {
     options.streams = true;
   }
+
   cmd = [
-    'avprobe',
+    options.cmdPath || 'avprobe',
     options.streams ? '-show_streams' : '',
     options.format ? '-show_format' : '',
     '-of json',
