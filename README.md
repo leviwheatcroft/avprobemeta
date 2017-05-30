@@ -10,6 +10,8 @@ you'll also need avprobe which is available via `libav-tools` package on debian-
 
 `$ apt-get install libav-tools`
 
+Windows users might want to check out the official static builds http://builds.libav.org/windows/
+
 # usage
 
 ```javascript
@@ -27,6 +29,11 @@ avprobemeta('./test.mp4', { format: false }, function(err, meta) {
 
 // Omit streams
 avprobemeta('./test.mp4', { streams: false }, function(err, meta) {
+  console.log(JSON.stringify(meta, null, '  '));
+});
+
+// Specify avprobe binary path
+avprobemeta('./test.mp4', {cmdPath: 'C:\\PROJEKTE\\libav\\bin\\avprobe'}, function(err, meta) {
   console.log(JSON.stringify(meta, null, '  '));
 });
 ```
